@@ -4,8 +4,8 @@
   width: 20px;
   height: 20px;
   margin: 0 18px 0 0;
-  background: #D1AF75;
-  border: 1px solid #D1AF75;
+  background: #fff;
+  border: 1px solid #B83227;
   cursor: pointer;
 }
 
@@ -15,19 +15,23 @@
 }*/
 .jq-checkbox.disabled,
 .jq-radio.disabled {
-  opacity: .55;
+  opacity: 0.55;
 }
 
 .jq-checkbox {
   border-radius: 1px;
 }
 
+.jq-checkbox.checked {
+  background: #B83227;
+}
+
 .jq-checkbox.checked .jq-checkbox__div {
   width: 12px;
   height: 7px;
   margin: 3px 0 0 3px;
-  border-bottom: 1px solid #0C011F;
-  border-left: 1px solid #0C011F;
+  border-bottom: 1px solid #fff;
+  border-left: 1px solid #fff;
   -webkit-transform: rotate(-50deg);
   -ms-transform: rotate(-50deg);
       transform: rotate(-50deg);
@@ -42,7 +46,7 @@
   height: 10px;
   margin: 5px 0 0 5px;
   border-radius: 50%;
-  background: #fff;
+  background: #B83227;
 }
 
 .jq-file {
@@ -188,7 +192,7 @@
 }
 
 .jq-number__spin:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 4px;
   left: 11px;
@@ -469,12 +473,12 @@
   color: #FFF;
 }
 
-input[type='email'].styler,
-input[type='password'].styler,
-input[type='search'].styler,
-input[type='tel'].styler,
-input[type='text'].styler,
-input[type='url'].styler,
+input[type=email].styler,
+input[type=password].styler,
+input[type=search].styler,
+input[type=tel].styler,
+input[type=text].styler,
+input[type=url].styler,
 textarea.styler {
   padding: 8px 9px;
   border: 1px solid #CCC;
@@ -486,7 +490,7 @@ textarea.styler {
   color: #333;
 }
 
-input[type='search'].styler {
+input[type=search].styler {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -496,22 +500,22 @@ textarea.styler {
   overflow: auto;
 }
 
-input[type='email'].styler:hover,
-input[type='password'].styler:hover,
-input[type='search'].styler:hover,
-input[type='tel'].styler:hover,
-input[type='text'].styler:hover,
-input[type='url'].styler:hover,
+input[type=email].styler:hover,
+input[type=password].styler:hover,
+input[type=search].styler:hover,
+input[type=tel].styler:hover,
+input[type=text].styler:hover,
+input[type=url].styler:hover,
 textarea.styler:hover {
   border-color: #B3B3B3;
 }
 
-input[type='email'].styler:hover:focus,
-input[type='password'].styler:hover:focus,
-input[type='search'].styler:hover:focus,
-input[type='tel'].styler:hover:focus,
-input[type='text'].styler:hover:focus,
-input[type='url'].styler:hover:focus,
+input[type=email].styler:hover:focus,
+input[type=password].styler:hover:focus,
+input[type=search].styler:hover:focus,
+input[type=tel].styler:hover:focus,
+input[type=text].styler:hover:focus,
+input[type=url].styler:hover:focus,
 textarea.styler:hover:focus {
   border-color: #CCC;
   border-top-color: #B3B3B3;
@@ -521,9 +525,9 @@ textarea.styler:hover:focus {
 }
 
 button.styler,
-input[type='button'].styler,
-input[type='submit'].styler,
-input[type='reset'].styler {
+input[type=button].styler,
+input[type=submit].styler,
+input[type=reset].styler {
   overflow: visible;
   padding: 8px 11px;
   border: 1px solid #CCC;
@@ -542,35 +546,35 @@ input[type='reset'].styler {
 }
 
 button.styler.styler::-moz-focus-inner,
-input[type='button'].styler.styler::-moz-focus-inner,
-input[type='submit'].styler.styler::-moz-focus-inner,
-input[type='reset'].styler.styler::-moz-focus-inner {
+input[type=button].styler.styler::-moz-focus-inner,
+input[type=submit].styler.styler::-moz-focus-inner,
+input[type=reset].styler.styler::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
 
 button.styler:not([disabled]):hover,
-input[type='button'].styler:not([disabled]):hover,
-input[type='submit'].styler:not([disabled]):hover,
-input[type='reset'].styler:not([disabled]):hover,
-input[type='reset'].styler:hover {
+input[type=button].styler:not([disabled]):hover,
+input[type=submit].styler:not([disabled]):hover,
+input[type=reset].styler:not([disabled]):hover,
+input[type=reset].styler:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#F6F6F6), to(#E6E6E6));
   background: -o-linear-gradient(#F6F6F6, #E6E6E6);
   background: linear-gradient(#F6F6F6, #E6E6E6);
 }
 
 button.styler:active,
-input[type='button'].styler:active,
-input[type='submit'].styler:active,
-input[type='reset'].styler:active {
+input[type=button].styler:active,
+input[type=submit].styler:active,
+input[type=reset].styler:active {
   background: #F5F5F5;
   -webkit-box-shadow: inset 1px 1px 3px #DDD;
           box-shadow: inset 1px 1px 3px #DDD;
 }
 
 button.styler[disabled],
-input[type='button'].styler[disabled],
-input[type='submit'].styler[disabled] {
+input[type=button].styler[disabled],
+input[type=submit].styler[disabled] {
   border-color: #CCC;
   background: #F5F5F5;
   -webkit-box-shadow: none;

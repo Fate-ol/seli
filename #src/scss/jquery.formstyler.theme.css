@@ -4,8 +4,8 @@
 	width: 20px;
 	height: 20px;
 	margin: 0 18px 0 0;
-  background: #D1AF75;
-	border: 1px solid #D1AF75;
+  background: #fff;
+	border: 1px solid #B83227;
 	cursor: pointer;
 }
 /*.jq-checkbox.focused,
@@ -19,12 +19,15 @@
 .jq-checkbox {
 	border-radius: 1px;
 }
+.jq-checkbox.checked {
+  background: #B83227;
+}
 .jq-checkbox.checked .jq-checkbox__div {
 	width: 12px;
 	height: 7px;
 	margin: 3px 0 0 3px;
-	border-bottom: 1px solid #0C011F;
-	border-left: 1px solid #0C011F;
+	border-bottom: 1px solid #fff;
+	border-left: 1px solid #fff;
 	-webkit-transform: rotate(-50deg);
 	transform: rotate(-50deg);
 }
@@ -36,7 +39,7 @@
 	height: 10px;
 	margin: 5px 0 0 5px;
 	border-radius: 50%;
-	background: #fff;
+	background: #B83227;
 }
 .jq-file {
 	width: 270px;

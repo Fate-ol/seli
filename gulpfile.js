@@ -37,9 +37,10 @@ let { src, dest } = require('gulp'),
     browsersync = require("browser-sync").create(),
     fileinclude = require("gulp-file-include"),
     del = require("del"),
-    scss = require("gulp-sass"),
+    //scss = require("gulp-sass"),
+    scss = require('gulp-sass')(require('sass')),
     autoprefixer = require("gulp-autoprefixer"),
-    group_media = require("gulp-group-css-media-queries"), //сборка медиа запросов
+    //group_media = require("gulp-group-css-media-queries"), //сборка медиа запросов
     clean_css = require("gulp-clean-css"),
     rename = require("gulp-rename"),
     uflify = require("gulp-uglify-es").default, // минификация js (для старых установить buble)
@@ -65,9 +66,10 @@ function html() {
 function css() {
     return src(path.src.css)
         .pipe(
-            scss({
-                outputStyle: "expanded"
-            })
+          scss({ outputStyle: 'expanded' }).on('error', scss.logError)
+            //scss({
+            //    outputStyle: "expanded"
+            //})
         )
         //.pipe ( //сборка медиа запросов
           //group_media()
@@ -86,6 +88,8 @@ function css() {
           })
         )
         .pipe(dest(path.build.css))
+        
+        //.pipe(browserSync.reload({stream: true}))
         .pipe(browsersync.stream())
 }
 
@@ -127,7 +131,7 @@ function fonts() {
 function watchFiles(params) {
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.fonts], fonts);
-    gulp.watch([path.watch.css], css);
+    gulp.watch([path.watch.css],{ usePolling: true }, css);
     gulp.watch([path.watch.js], js);
     gulp.watch([path.watch.img], images);
 }
