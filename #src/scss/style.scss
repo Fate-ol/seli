@@ -164,16 +164,26 @@ h1, .h1 {
   margin: 0 0 37px 0;
   padding: 0;
   @include respond-to(tablet) {
-    font-size: 28px;
+    font-size: 26px;
     margin: 0 0 20px 0;
   }
   @include respond-to(mobile) {
-    font-size: 26px;
+    font-size: 22px;
   }
   & span {
     font-weight: bold;
     font-size: 15px;
     line-height: 100%;
+  }
+  & i {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    @include respond-to(mobile) {
+      margin-right: 10px;
+    }
+  }  
+  & i img {
+    max-width: 40px;
   }
 }
 h2, .h2 {
@@ -191,6 +201,24 @@ h2, .h2 {
   }
   @include respond-to(mobile) {
     font-size: 14px;
+    line-height: 1.5;
+  }
+}
+h3, .h3 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #404041;
+  margin: 0 0 37px 0;
+  padding: 0;
+
+  @include respond-to(tablet) {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+  }
+  @include respond-to(mobile) {
+    font-size: 16px;
     line-height: 1.5;
   }
 }
@@ -1815,6 +1843,164 @@ ul.list-tick {
   margin-bottom: 20px;
 
 }
+.types-line {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0 0 37px 0;
+
+  @include respond-to(tablet) {
+    margin: 0 0 20px 0;
+  }
+
+  &__number {
+    flex: 0 0 82px;
+    margin: 0 20px 0 0;
+    background: #F9F9F9;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 15px;
+    color: $color;
+    padding: 7px;
+    text-align: center;
+  }
+  &__text {
+    flex: 1 1 0;
+    @include respond-to(mobile) {
+      padding-top: 10px;
+      flex: 1 1 100%;
+    }
+    & p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.head-tex i {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: #D9D9D9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.b-win {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.win {
+  position: relative;
+  width: 100%;
+  max-width: 1214px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #fff;
+  @include respond-to(mobile) {
+    padding: 15px;
+  }
+  
+  & h1 {
+    padding-right: 50px;
+  }
+}
+.win__close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  background: url("../img/ico-close.svg") no-repeat center center / contain;
+
+  @include respond-to(mobile) {
+    width: 36px;
+    height: 36px;
+    top: 15px;
+    right: 15px;
+  }
+
+  & a {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+.b-up {
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
+  width: 48px;
+  height: 48px;
+  background: url("../img/ico-up.svg") no-repeat center center / contain;
+  z-index: 99;
+
+  @media (max-width: 1700px) {
+    bottom: 100px;
+    right: 15px;
+  }
+
+  @include respond-to(mobile) {
+    width: 36px;
+    height: 36px;
+    bottom: 50px;
+    right: 15px;
+  }
+
+  & a {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+.sert-onmain {
+  position: relative;
+  display: inline-block;
+}
+.sert-download {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: block;
+  width: 15px;
+  height: 19px;
+  background: url("../img/ico-download-arr.svg") no-repeat center center / contain;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+@include respond-to(hov) {
+  .sert-onmain:hover .sert-download {
+    transition: all 0.3s ease;
+    animation: sert-download_anim 1.3s infinite ease;
+  }
+  @keyframes sert-download_anim {
+    0%, 100% {
+      transform: translate(0, 0px);
+    }
+    50% {
+      transform: translate(0, 10px);
+    }
+  }
+}
+
+
 
 @media (max-width: 767px) {
 }

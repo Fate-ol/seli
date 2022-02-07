@@ -162,19 +162,35 @@ h1, .h1 {
 
 @media only screen and (max-width: 991px) {
   h1, .h1 {
-    font-size: 28px;
+    font-size: 26px;
     margin: 0 0 20px 0;
   }
 }
 @media only screen and (max-width: 767px) {
   h1, .h1 {
-    font-size: 26px;
+    font-size: 22px;
   }
 }
 h1 span, .h1 span {
   font-weight: bold;
   font-size: 15px;
   line-height: 100%;
+}
+
+h1 i, .h1 i {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  h1 i, .h1 i {
+    margin-right: 10px;
+  }
+}
+h1 i img, .h1 i img {
+  max-width: 40px;
 }
 
 h2, .h2 {
@@ -196,6 +212,28 @@ h2, .h2 {
 @media only screen and (max-width: 767px) {
   h2, .h2 {
     font-size: 14px;
+    line-height: 1.5;
+  }
+}
+h3, .h3 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #404041;
+  margin: 0 0 37px 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 991px) {
+  h3, .h3 {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  h3, .h3 {
+    font-size: 16px;
     line-height: 1.5;
   }
 }
@@ -2226,4 +2264,221 @@ ul.list-tick li::before {
 
 .contact-requisites > .row {
   margin-bottom: 20px;
+}
+
+.types-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0;
+  margin: 0 0 37px 0;
+}
+
+@media only screen and (max-width: 991px) {
+  .types-line {
+    margin: 0 0 20px 0;
+  }
+}
+.types-line__number {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 82px;
+          flex: 0 0 82px;
+  margin: 0 20px 0 0;
+  background: #f9f9f9;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #b83227;
+  padding: 7px;
+  text-align: center;
+}
+
+.types-line__text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .types-line__text {
+    padding-top: 10px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+.types-line__text p:last-child {
+  margin-bottom: 0;
+}
+
+.head-tex i {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: #d9d9d9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 20px;
+}
+
+.b-win {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 100;
+}
+
+.win {
+  position: relative;
+  width: 100%;
+  max-width: 1214px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+  .win {
+    padding: 15px;
+  }
+}
+.win h1 {
+  padding-right: 50px;
+}
+
+.win__close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  background: url("../img/ico-close.svg") no-repeat center center/contain;
+}
+
+@media only screen and (max-width: 767px) {
+  .win__close {
+    width: 36px;
+    height: 36px;
+    top: 15px;
+    right: 15px;
+  }
+}
+.win__close a {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.b-up {
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
+  width: 48px;
+  height: 48px;
+  background: url("../img/ico-up.svg") no-repeat center center/contain;
+  z-index: 99;
+}
+
+@media (max-width: 1700px) {
+  .b-up {
+    bottom: 100px;
+    right: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .b-up {
+    width: 36px;
+    height: 36px;
+    bottom: 50px;
+    right: 15px;
+  }
+}
+.b-up a {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.sert-onmain {
+  position: relative;
+  display: inline-block;
+}
+
+.sert-download {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: block;
+  width: 15px;
+  height: 19px;
+  background: url("../img/ico-download-arr.svg") no-repeat center center/contain;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+@media only screen and (min-width: 768px) {
+  .sert-onmain:hover .sert-download {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-animation: sert-download_anim 1.3s infinite ease;
+    animation: sert-download_anim 1.3s infinite ease;
+  }
+
+  @-webkit-keyframes sert-download_anim {
+    0%, 100% {
+      -webkit-transform: translate(0, 0px);
+              transform: translate(0, 0px);
+    }
+    50% {
+      -webkit-transform: translate(0, 10px);
+              transform: translate(0, 10px);
+    }
+  }
+  @keyframes sert-download_anim {
+    0%, 100% {
+      -webkit-transform: translate(0, 0px);
+              transform: translate(0, 0px);
+    }
+    50% {
+      -webkit-transform: translate(0, 10px);
+              transform: translate(0, 10px);
+    }
+  }
 }
